@@ -1,0 +1,349 @@
+/* src/styles/ResultsDisplay.css */
+.results-container {
+  min-height: 100vh;
+  background: #0f0f13;
+  color: #e0e0e0;
+  padding: 2rem;
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+}
+
+.results-content {
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+/* Header Section */
+.results-header {
+  margin-bottom: 2rem;
+  padding-bottom: 1.5rem;
+  border-bottom: 1px solid #2a2a3a;
+}
+
+.results-title {
+  font-size: 2rem;
+  color: #ffffff;
+  margin: 0;
+  font-weight: 700;
+}
+
+/* Prompt Display */
+.prompt-display {
+  background: #1a1a24;
+  border-radius: 8px;
+  padding: 1.5rem;
+  margin-bottom: 2rem;
+}
+
+.prompt-display h3 {
+  margin-top: 0;
+  color: #7b81ff;
+  font-size: 1.1rem;
+  margin-bottom: 0.5rem;
+}
+
+.prompt-text {
+  color: black;
+  font-size: 1rem;
+  line-height: 1.6;
+}
+
+.button-group {
+  display: flex;
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.edit-prompt-btn, .analyze-btn {
+  background: #7b81ff;
+  color: white;
+  border: none;
+  padding: 0.8rem 1.5rem;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: 600;
+  font-size: 0.9rem;
+  transition: all 0.2s ease;
+}
+
+.edit-prompt-btn:hover, .analyze-btn:hover {
+  background: #6a70e6;
+}
+
+/* Model Results List */
+.model-results-list {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  margin-bottom: 3rem;
+}
+
+.model-result-card {
+  background: #1a1a24;
+  border-radius: 8px;
+  padding: 1.5rem;
+  border-left: 4px solid #7b81ff;
+}
+
+.model-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+
+.model-name {
+  font-weight: 600;
+  font-size: 1.2rem;
+  color: #ffffff;
+}
+
+.model-meta {
+  font-size: 0.9rem;
+  color: #b0b0c0;
+}
+
+.code-block {
+  margin-top: 1rem;
+}
+
+pre {
+  margin: 0;
+  padding: 1rem;
+  background: #252534;
+  border-radius: 6px;
+  overflow-x: auto;
+  font-family: 'Fira Code', monospace;
+  font-size: 0.9rem;
+  line-height: 1.6;
+  color: blue;
+  position: relative;
+}
+
+.copy-btn {
+  position: absolute;
+  top: 0.5rem;
+  right: 0.5rem;
+  background: rgba(123, 129, 255, 0.2);
+  border: none;
+  color: #e0e0e0;
+  padding: 0.3rem 0.8rem;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 0.8rem;
+  transition: all 0.2s ease;
+}
+
+.copy-btn:hover {
+  background: rgba(123, 129, 255, 0.3);
+}
+
+/* Analysis Section */
+.analysis-section {
+  background: #1a1a24;
+  border-radius: 8px;
+  padding: 2rem;
+  margin-top: 3rem;
+}
+
+.analysis-section h2 {
+  margin-top: 0;
+  color: #7b81ff;
+  font-size: 1.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.metrics-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 1.5rem;
+}
+
+.metric-card {
+  background: #252534;
+  border-radius: 8px;
+  padding: 1.2rem;
+}
+
+.metric-card h3 {
+  margin-top: 0;
+  margin-bottom: 1rem;
+  font-size: 1rem;
+  color: #ffffff;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.progress-container {
+  margin-bottom: 1rem;
+}
+
+.progress-label {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 0.5rem;
+  font-size: 0.85rem;
+  color: #b0b0c0;
+}
+
+.progress-bar {
+  height: 8px;
+  background: #3a3a4a;
+  border-radius: 4px;
+  overflow: hidden;
+}
+
+.progress-fill {
+  height: 100%;
+  border-radius: 4px;
+}
+
+.progress-fill.readability { background: #4caf50; }
+.progress-fill.complexity { background: #ff9800; }
+.progress-fill.debt { background: #f44336; }
+.progress-fill.maintainability { background: #2196f3; }
+
+/* Best Model Section */
+.best-model-card {
+  background: linear-gradient(135deg, rgba(123, 129, 255, 0.1), rgba(197, 138, 255, 0.1));
+  border-radius: 14px;
+  padding: 3rem 2.5rem;
+  border: 1px dashed #7b81ff;
+  text-align: center;
+  margin-top: 3rem;
+  position: relative;
+  overflow: hidden;
+}
+
+.best-model-card::before {
+  content: "🏆";
+  position: absolute;
+  top: 1rem;
+  right: 1.5rem;
+  font-size: 2rem;
+  opacity: 0.2;
+}
+
+.best-model-card h2 {
+  color: #c58aff;
+  margin-top: 0;
+  font-size: 1.8rem;
+  margin-bottom: 1rem;
+}
+
+.best-model-name {
+  font-size: 1.6rem;
+  color: #ffffff;
+  margin: 1.5rem 0;
+  font-weight: 700;
+  background: linear-gradient(90deg, #7b81ff, #c58aff);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  display: inline-block;
+  padding: 0 1rem;
+}
+
+.best-model-reason {
+  color: #e0e0f0;
+  max-width: 700px;
+  margin: 0 auto;
+  font-size: 1.1rem;
+  line-height: 1.6;
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+  .model-results-grid {
+    grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+  }
+}
+
+@media (max-width: 768px) {
+  .results-container {
+    padding: 1.5rem;
+  }
+  
+  .model-results-grid {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+  
+  .metrics-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .button-group {
+    flex-direction: column;
+  }
+  
+  .prompt-display, .metrics-section {
+    padding: 1.5rem;
+  }
+}
+
+/* Animations */
+@keyframes fadeInUp {
+  from { opacity: 0; transform: translateY(30px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.model-result-card {
+  animation: fadeInUp 0.6s cubic-bezier(0.22, 0.61, 0.36, 1) forwards;
+  opacity: 0;
+}
+
+.model-result-card:nth-child(1) { animation-delay: 0.1s; }
+.model-result-card:nth-child(2) { animation-delay: 0.2s; }
+.model-result-card:nth-child(3) { animation-delay: 0.3s; }
+.model-result-card:nth-child(4) { animation-delay: 0.4s; }
+.model-result-card:nth-child(5) { animation-delay: 0.5s; }
+
+/* Floating animation for best model card */
+@keyframes float {
+  0% { transform: translateY(0px); }
+  50% { transform: translateY(-8px); }
+  100% { transform: translateY(0px); }
+}
+
+.best-model-card {
+  animation: float 6s ease-in-out infinite;
+}
+
+/* Loading Indicator */
+.loading-indicator {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem;
+}
+
+.spinner {
+  width: 40px;
+  height: 40px;
+  border: 4px solid rgba(123, 129, 255, 0.3);
+  border-radius: 50%;
+  border-top-color: #7b81ff;
+  animation: spin 1s ease-in-out infinite;
+  margin-bottom: 1rem;
+}
+
+@keyframes spin {
+  to { transform: rotate(360deg); }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .results-container {
+    padding: 1.5rem;
+  }
+  
+  .metrics-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .prompt-display, .analysis-section {
+    padding: 1.2rem;
+  }
+}
