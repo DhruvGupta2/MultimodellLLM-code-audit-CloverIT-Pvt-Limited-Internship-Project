@@ -1,4 +1,9 @@
 #  LLM Code Audit - Comprehensive Documentation
+---
+### 📌 Internship Project
+This project was part of my **Summer Internship at Clover IT Services Pvt Ltd**.  
+I was responsible for end-to-end design and development, including frontend (React + Vite), backend (Firebase + Firestore), and AI integrations (ChatGPT, Gemini, DeepSeek, LLaMA, Mistral).
+---
 ### Link for the Live Website
 https://multi-model-llm-code-audit.vercel.app/
 
